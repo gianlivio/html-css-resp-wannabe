@@ -127,53 +127,57 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
-/* mobile first approach -purtroppo con max e non con min width*/
 
-@media screen and (max-width: 480px) {
-    .container {
-        width: auto;
-        padding: 0 10px;
-    }
-
-    html, body {
-        overflow-x: hidden;
-    }
-    
-    .row, .lessons .col, .steps .col, .why-us .col-left, .why-us .col-right {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .why-us {
-        background-color: black;
-    }
-
-
-}
 
  /* tablet 768px in giu */
 
  @media screen and (max-width: 768px) {
     .container {
-        width: auto;
-        padding: 10px;
-    }
-
-    html, body {
-        overflow-x: hidden;
-    }
-
-    .row, .lessons .col, .steps .col, .why-us .col-left, .why-us .col-right {
-      
         width: 100%;
+       
     }
-  
-    .card, img {
-        width: 100%;
-        height: auto;
-    }
-
    
 }
 
+/* mobile first approach -*/
 
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+    
+    }
+
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lessons .col 
+    .steps .col 
+    .why-us .col {
+        width: 100%;
+        margin-bottom: 40px;
+
+    }
+    
+    
+    
+    .why-us {
+        padding-top: 3rem;
+        margin-bottom: 0;
+        background-color: black;
+    }
+.steps {
+    margin-bottom: 0;
+}
+
+}
+
+@media screen and (min-width 768px) and (max-width:1160px) {
+    .container {
+        max-width: 100%;
+    }
+}
